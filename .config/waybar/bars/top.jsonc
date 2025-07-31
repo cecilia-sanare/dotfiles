@@ -1,0 +1,66 @@
+{
+  "include": ["~/.config/waybar/widgets/cpu/index.jsonc", "~/.config/waybar/widgets/notify/index.jsonc"],
+
+  "layer": "top",
+  "position": "top",
+  "margin-bottom": -10,
+  "spacing": 0,
+  "reload_style_on_change": true,
+
+  "modules-left": ["custom/lock", "group/gcpu"],
+  "modules-center": ["clock", "group/notify"],
+  "modules-right": ["bluetooth", "network", "pulseaudio"],
+
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "{icon}",
+    "format-off": "{icon}",
+    "format-connected": "{icon}",
+    "format-icons": {
+      "on": "󰂯",
+      "off": "󰂲",
+      "connected": "󰂱"
+    },
+    "tooltip": true,
+    "tooltip-format": "Bluetooth Settings",
+    "tooltip-format-connected": "{device_enumerate}",
+    "on-click": "kitty -e bluetuith"
+  },
+
+  "clock": {
+    "timezone": "America/Chicago",
+    "tooltip": false,
+    "format": "{:%I:%M:%S %p  -  %A, %d}",
+    "interval": 1
+  },
+
+  "network": {
+    "format": "{icon}",
+    "format-icons": {
+      "wifi": ["󰤨"],
+      "ethernet": ["󰈀"],
+      "disconnected": ["󰖪"]
+    },
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "format-linked": "󰈁",
+    "tooltip": false,
+    "on-click": "pgrep -x wofi &>/dev/null && notify-send wofi || networkmanager_dmenu"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "custom/lock": {
+    "tooltip": false,
+    "on-click": "sh -c '(sleep 0s; hyprlock)' & disown",
+    "format": ""
+  }
+}

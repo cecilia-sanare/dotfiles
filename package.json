@@ -1,0 +1,11 @@
+{
+  "name": "dotfiles",
+  "scripts": {
+    "dev": "bun run build -- -w",
+    "build": "sass --no-source-map \"$PWD/.config/waybar/styles/index.scss\" \"$PWD/.config/waybar/style.css\""
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.19",
+    "sass": "^1.89.2"
+  }
+}

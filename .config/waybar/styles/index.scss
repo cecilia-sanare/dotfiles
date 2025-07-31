@@ -1,0 +1,92 @@
+@use 'constants.scss' as *;
+@forward './widgets/cpu.scss';
+
+* {
+  font-family: 'SF Pro Text', 'Inter', 'Segoe UI, NotoSans Nerd Font', sans-serif;
+  font-size: 13px;
+  min-height: 0;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+/* --- Waybar Container --- */
+#waybar {
+  background: transparent;
+  color: #c6d0f5;
+  margin: 0px;
+  font-weight: 500;
+}
+
+#custom-lock,
+#clock,
+#bluetooth,
+#network,
+#pulseaudio {
+  background-color: $background;
+  padding: 0.4rem 0.7rem;
+  margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+  border: none;
+  /* Transition for background-color and color only */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $active;
+  }
+}
+
+/* Round the ends and push it away from the edge */
+#custom-lock,
+#clock,
+#bluetooth {
+  margin-left: 20px;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+#gcpu,
+#clock,
+#pulseaudio {
+  margin-right: 20px;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+#bluetooth {
+  color: #888888;
+  font-size: 16px;
+
+  &.on {
+    color: #2196f3;
+  }
+
+  &.connected {
+    color: #99d1db;
+  }
+}
+
+#battery {
+  color: #99d1db;
+
+  &.charging {
+    color: #a6d189;
+  }
+
+  &.warning:not(.charging) {
+    color: #e78284;
+  }
+}
+
+/* --- Tooltip Styles --- */
+tooltip {
+  background-color: #1a1b26;
+  color: #dddddd;
+  padding: 5px 12px;
+  margin: 5px 0px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
