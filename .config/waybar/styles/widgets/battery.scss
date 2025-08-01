@@ -1,0 +1,11 @@
+#battery {
+  color: #99d1db;
+
+  &.charging {
+    color: #a6d189;
+  }
+
+  &.warning:not(.charging) {
+    color: #e78284;
+  }
+}

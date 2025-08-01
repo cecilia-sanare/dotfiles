@@ -1,0 +1,25 @@
+@mixin px($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin py($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin pt($padding) {
+  padding-top: $padding;
+}
+
+@mixin pb($padding) {
+  padding-bottom: $padding;
+}
+
+@mixin pl($padding) {
+  padding-left: $padding;
+}
+
+@mixin pr($padding) {
+  padding-right: $padding;
+}

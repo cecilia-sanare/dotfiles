@@ -1,0 +1,25 @@
+@mixin mx($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin my($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+@mixin mt($margin) {
+  margin-top: $margin;
+}
+
+@mixin mb($margin) {
+  margin-bottom: $margin;
+}
+
+@mixin ml($padding) {
+  padding-left: $padding;
+}
+
+@mixin mr($padding) {
+  padding-right: $padding;
+}

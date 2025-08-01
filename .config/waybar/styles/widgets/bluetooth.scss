@@ -1,15 +1,17 @@
 @use '../constants.scss' as *;
 @use '../mixins/index.scss' as *;
 
-#gcpu {
+#bluetooth {
   @include widget();
-}
 
-#custom-cpu-temp,
-#cpu {
-  margin-left: 10px;
-}
-
-#custom-cpu-icon {
+  color: #888888;
   font-size: 16px;
+
+  &.on {
+    color: #2196f3;
+  }
+
+  &.connected {
+    color: #99d1db;
+  }
 }

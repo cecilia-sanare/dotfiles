@@ -1,0 +1,6 @@
+@use '../constants.scss' as *;
+@use '../mixins/index.scss' as *;
+
+#clock {
+  @include widget();
+}
