@@ -5,15 +5,36 @@
       "transition-duration": 500,
       "transition-left-to-right": true
     },
-    "modules": ["pulseaudio"]
+    "modules": ["pulseaudio", "pulseaudio#mic", "pulseaudio/slider"]
   },
 
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "",
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "tooltip-format": "{volume}% {icon} | {desc}",
+    "format-muted": "󰖁",
     "format-icons": {
-      "default": ["", "", " "]
+      "default": ["󰕿", "󰖀", "󰕾"]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "pulseaudio#mic": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "tooltip-format": "{volume}% {format_source} ",
+    "on-click": "pactl set-source-mute 0 toggle",
+    "on-scroll-down": "pactl set-source-volume 0 -1%",
+    "on-scroll-up": "pactl set-source-volume 0 +1%"
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 140
   }
 }

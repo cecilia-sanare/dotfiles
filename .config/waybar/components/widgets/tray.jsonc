@@ -1,0 +1,24 @@
+{
+  "group/gtray": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+      "click-to-reveal": true
+    },
+    "modules": ["custom/tray-expand", "tray"]
+  },
+
+  "custom/tray-expand": {
+    "format": ""
+  },
+
+  "tray": {
+    "icon-size": 22,
+    "spacing": 10,
+    "show-passive-items": true,
+    "icons": {
+      "Spotify": ""
+    }
+  }
+}

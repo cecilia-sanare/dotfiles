@@ -1,0 +1,27 @@
+@use '../constants.scss' as *;
+@use './margin.scss' as *;
+@use './widget.scss' as *;
+
+@mixin drawer($rtl: false) {
+  @include widget();
+
+  .drawer-child {
+    opacity: 0;
+
+    /* Transition for background-color and color only */
+    transition: 0.5s ease-in-out;
+    transition-property: opacity;
+
+    > * {
+      @if $rtl {
+        @include mr($drawer-item-spacing);
+      } @else {
+        @include ml($drawer-item-spacing);
+      }
+    }
+  }
+
+  &:hover .drawer-child {
+    opacity: 1;
+  }
+}

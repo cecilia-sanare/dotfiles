@@ -2,7 +2,7 @@
   "name": "dotfiles",
   "scripts": {
     "dev": "bun run build -- -w",
-    "build": "sass --no-source-map \"$PWD/.config/waybar/styles/index.scss\" \"$PWD/.config/waybar/style.css\""
+    "build": "sass --no-source-map --no-error-css \"$PWD/.config/waybar/styles/index.scss\" \"$PWD/.config/waybar/style.css\""
   },
   "devDependencies": {
     "@types/bun": "^1.2.19",

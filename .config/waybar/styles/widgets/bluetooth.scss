@@ -2,12 +2,12 @@
 @use '../mixins/index.scss' as *;
 
 #gbluetooth {
-  @include widget();
+  @include drawer();
 }
 
 #bluetooth {
   color: #888888;
-  font-size: 16px;
+  font-size: $icon-size;
 
   &.on {
     color: #2196f3;
@@ -16,8 +16,4 @@
   &.connected {
     color: #99d1db;
   }
-}
-
-#custom-bluetooth-name {
-  @include ml(6px);
 }

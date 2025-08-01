@@ -2,9 +2,12 @@
 @use 'mixins/index.scss' as *;
 @forward 'widgets/index.scss';
 
+$waybar-margin-top: 0 !default;
+$waybar-margin-x: 0 !default;
+
 * {
   font-family: 'SF Pro Text', 'Inter', 'Segoe UI, NotoSans Nerd Font', sans-serif;
-  font-size: 13px;
+  font-size: $font-size;
   min-height: 0;
   padding: 0;
 }
@@ -16,15 +19,14 @@
   font-weight: 500;
 
   > * {
-    @include mx(20px);
+    @include mt($waybar-margin-top);
+    @include mx($waybar-margin-x);
   }
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  @include mt(5px);
-
   > :first-child > * {
     @include rounded-left($radius);
   }
@@ -43,5 +45,5 @@ tooltip {
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
+  font-size: $tooltip-font-size;
 }

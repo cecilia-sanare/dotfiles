@@ -1,8 +1,10 @@
 @use '../constants.scss' as *;
+@use './padding.scss' as *;
+
+$module-margin-x: 0 !default;
 
 @mixin widget() {
   background-color: $background;
-  padding: 0.4rem 0.7rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   min-width: 0;
   border: none;
@@ -11,5 +13,20 @@
 
   &:hover {
     background-color: $active;
+  }
+
+  @include py(0.4rem);
+  @include px(0.7rem);
+
+  @if $module-margin-x != 0 {
+    &:first-child {
+      @include pl($module-margin-x);
+    }
+  }
+
+  @if $module-margin-x != 0 {
+    &:last-child {
+      @include pr($module-margin-x);
+    }
   }
 }

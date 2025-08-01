@@ -4,3 +4,7 @@
 #gpulseaudio {
   @include widget();
 }
+
+#pulseaudio {
+  font-size: $icon-size;
+}
