@@ -1,0 +1,16 @@
+{
+  "group/glock": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true
+    },
+    "modules": ["custom/lock"]
+  },
+
+  "custom/lock": {
+    "tooltip": false,
+    "on-click": "sh -c '(sleep 0s; hyprlock)' & disown",
+    "format": ""
+  }
+}

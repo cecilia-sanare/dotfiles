@@ -6,7 +6,7 @@
       "children-class": "custom/swaync",
       "transition-left-to-right": false
     },
-    "modules": ["custom/swaync", "custom/dot_update"]
+    "modules": ["custom/swaync"]
   },
 
   "custom/swaync": {
@@ -29,12 +29,5 @@
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
-
-  "custom/dot_update": {
-    "format": " 󰁈 ",
-    "on-click": "$HOME/.config/hypr/scripts/KooLsDotsUpdate.sh",
-    "tooltip": true,
-    "tooltip-format": "Check KooL Dots update\nIf available"
   }
 }

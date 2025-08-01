@@ -1,0 +1,17 @@
+{
+  "group/gclock": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true
+    },
+    "modules": ["clock"]
+  },
+
+  "clock": {
+    "timezone": "America/Chicago",
+    "tooltip": false,
+    "format": "{:%I:%M:%S %p  -  %A, %d}",
+    "interval": 1
+  }
+}

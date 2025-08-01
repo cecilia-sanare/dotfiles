@@ -1,0 +1,21 @@
+{
+  "include": [
+    "~/.config/waybar/components/widgets/bluetooth.jsonc",
+    "~/.config/waybar/components/widgets/clock.jsonc",
+    "~/.config/waybar/components/widgets/cpu.jsonc",
+    "~/.config/waybar/components/widgets/lock.jsonc",
+    "~/.config/waybar/components/widgets/network.jsonc",
+    "~/.config/waybar/components/widgets/notify.jsonc",
+    "~/.config/waybar/components/widgets/pulseaudio.jsonc"
+  ],
+
+  "layer": "top",
+  "position": "top",
+  "margin-bottom": -10,
+  "spacing": 0,
+  "reload_style_on_change": true,
+
+  "modules-left": ["group/glock", "group/gcpu"],
+  "modules-center": ["group/gclock", "group/gnotify"],
+  "modules-right": ["group/gbluetooth", "group/gnetwork", "group/gpulseaudio"]
+}

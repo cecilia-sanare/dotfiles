@@ -1,9 +1,11 @@
 @use '../constants.scss' as *;
 @use '../mixins/index.scss' as *;
 
-#bluetooth {
+#gbluetooth {
   @include widget();
+}
 
+#bluetooth {
   color: #888888;
   font-size: 16px;
 
@@ -14,4 +16,8 @@
   &.connected {
     color: #99d1db;
   }
+}
+
+#custom-bluetooth-name {
+  @include ml(6px);
 }

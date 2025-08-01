@@ -1,0 +1,34 @@
+{
+  "group/gbluetooth": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true
+    },
+    "modules": ["bluetooth", "custom/bluetooth-name"]
+  },
+
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "{icon}",
+    "format-off": "{icon}",
+    "format-connected": "{icon}",
+    "format-icons": {
+      "on": "󰂯",
+      "off": "󰂲",
+      "connected": "󰂱"
+    },
+    "tooltip": true,
+    "tooltip-format": "Bluetooth Settings",
+    "tooltip-format-connected": "{device_enumerate}",
+    "on-click": "kitty -e bluetuith"
+  },
+
+  "custom/bluetooth-name": {
+    "format": "{}",
+    "exec": "~/.config/waybar/bin/bluetooth-name.sh",
+    "interval": 10,
+    "return-type": "json",
+    "on-click": "kitty -e bluetuith"
+  }
+}

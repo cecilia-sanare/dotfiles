@@ -1,6 +1,6 @@
 @use '../constants.scss' as *;
 @use '../mixins/index.scss' as *;
 
-#custom-lock {
+#glock {
   @include widget();
 }
