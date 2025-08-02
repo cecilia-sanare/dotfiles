@@ -3,9 +3,9 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": true
+      "transition-left-to-right": false
     },
-    "modules": ["network"]
+    "modules": ["network", "network#speed"]
   },
 
   "network": {
@@ -20,6 +20,17 @@
     "format-disconnected": "󰖪",
     "format-linked": "󰈁",
     "tooltip": false,
-    "on-click": "pgrep -x wofi &>/dev/null && notify-send wofi || networkmanager_dmenu"
+    "on-click-middle": "pgrep -x wofi &>/dev/null && notify-send wofi || networkmanager_dmenu"
+  },
+
+  "network#speed": {
+    "format": "{bandwidthDownBits}",
+    "interval": 5,
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-disconnected": "Not Connected to any type of Network",
+    "tooltip": true,
+    "on-click-middle": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu"
   }
 }

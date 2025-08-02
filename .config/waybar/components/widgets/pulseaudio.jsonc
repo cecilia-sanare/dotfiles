@@ -3,38 +3,35 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": true
+      "transition-left-to-right": false
     },
-    "modules": ["pulseaudio", "pulseaudio#mic", "pulseaudio/slider"]
+    "modules": ["pulseaudio", "pulseaudio/slider"]
   },
 
   "pulseaudio": {
+    "scroll-step": 2,
     "format": "{icon}",
-    "format-bluetooth": "{icon}",
-    "tooltip-format": "{volume}% {icon} | {desc}",
-    "format-muted": "󰖁",
-    "format-icons": {
-      "default": ["󰕿", "󰖀", "󰕾"]
-    },
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "pavucontrol",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-    "smooth-scrolling-threshold": 1
-  },
-
-  "pulseaudio#mic": {
-    "format": "{format_source}",
+    "format-muted": "󰝟",
     "format-source": "",
     "format-source-muted": "",
-    "tooltip-format": "{volume}% {format_source} ",
-    "on-click": "pactl set-source-mute 0 toggle",
-    "on-scroll-down": "pactl set-source-volume 0 -1%",
-    "on-scroll-up": "pactl set-source-volume 0 +1%"
+    "format-icons": {
+      "speaker": "󰕾",
+      "hdmi": "󰓃",
+      "headphone": "󰋋",
+      "hands-free": "󰋋",
+      "headset": "󰋋",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": "󰕾"
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pavucontrol -t 3",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   },
 
   "pulseaudio/slider": {
-    "min": 0,
-    "max": 140
+    "orientation": "horizontal"
   }
 }

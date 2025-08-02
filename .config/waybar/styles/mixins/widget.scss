@@ -13,6 +13,7 @@ $module-margin-x: 0 !default;
 
   &:hover {
     background-color: $active;
+    color: $active-accent;
   }
 
   @include py(0.4rem);

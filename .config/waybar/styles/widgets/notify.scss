@@ -2,14 +2,9 @@
 @use '../mixins/index.scss' as *;
 
 #gnotify {
-  @include widget();
-}
+  @include drawer();
 
-#custom-cpu-temp,
-#cpu {
-  @include ml(6px);
-}
-
-#custom-cpu-icon {
-  font-size: $icon-size;
+  #custom-swaync {
+    font-size: calc($icon-size);
+  }
 }

@@ -2,9 +2,44 @@
 @use '../mixins/index.scss' as *;
 
 #gpulseaudio {
-  @include widget();
+  @include drawer(true);
+
+  #pulseaudio {
+    font-size: $icon-size;
+  }
 }
 
-#pulseaudio {
-  font-size: $icon-size;
+#pulseaudio-slider {
+  slider {
+    margin: 0;
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  trough {
+    min-width: 80px;
+    min-height: 10px;
+    border-radius: $radius;
+    background-color: green;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  highlight {
+    min-height: 10px;
+    border-radius: $radius;
+    color: orange;
+    background-color: orange;
+
+    &:hover {
+      color: red;
+      background-color: red;
+    }
+  }
 }

@@ -2,8 +2,5 @@
 @use '../mixins/index.scss' as *;
 
 #gclock {
-  @include widget();
-}
-
-#clock {
+  @include drawer(true);
 }

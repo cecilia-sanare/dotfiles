@@ -15,7 +15,7 @@ $waybar-margin-x: 0 !default;
 /* --- Waybar Container --- */
 #waybar {
   background: transparent;
-  color: #c6d0f5;
+  color: $accent;
   font-weight: 500;
 
   > * {

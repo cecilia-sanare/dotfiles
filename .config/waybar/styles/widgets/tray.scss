@@ -3,8 +3,17 @@
 
 #gtray {
   @include drawer(true);
-}
 
-#custom-tray-expand {
-  font-size: $icon-size;
+  #custom-tray-expand {
+    font-size: $icon-size;
+  }
+
+  #tray > * {
+    color: $active-accent;
+  }
+
+  // TODO: Style the tray context menu
+  // #tray menu {
+  //   border-radius: 10px;
+  // }
 }

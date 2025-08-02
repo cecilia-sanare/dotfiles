@@ -2,18 +2,20 @@
 @use '../mixins/index.scss' as *;
 
 #gbluetooth {
-  @include drawer();
-}
+  @include drawer(true);
 
-#bluetooth {
-  color: #888888;
-  font-size: $icon-size;
+  #bluetooth {
+    &:not(.name) {
+      color: #888888;
+      font-size: $icon-size;
 
-  &.on {
-    color: #2196f3;
-  }
+      &.on {
+        color: #2196f3;
+      }
 
-  &.connected {
-    color: #99d1db;
+      &.connected {
+        color: #99d1db;
+      }
+    }
   }
 }

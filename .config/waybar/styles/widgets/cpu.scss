@@ -3,8 +3,8 @@
 
 #gcpu {
   @include drawer();
-}
 
-#custom-cpu-icon {
-  font-size: $icon-size;
+  #custom-cpu-icon {
+    font-size: $icon-size;
+  }
 }

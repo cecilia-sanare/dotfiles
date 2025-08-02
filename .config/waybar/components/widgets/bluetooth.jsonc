@@ -3,9 +3,9 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": true
+      "transition-left-to-right": false
     },
-    "modules": ["bluetooth", "custom/bluetooth-name"]
+    "modules": ["bluetooth", "bluetooth#name"]
   },
 
   "bluetooth": {
@@ -24,11 +24,11 @@
     "on-click": "kitty -e bluetuith"
   },
 
-  "custom/bluetooth-name": {
-    "format": "{}",
-    "exec": "~/.config/waybar/bin/bluetooth-name.sh",
-    "interval": 10,
-    "return-type": "json",
+  "bluetooth#name": {
+    "format": "{status}",
+    "format-on": "",
+    "format-connected": "{device_alias}",
+    "format-connected-battery": "<b>{device_alias}</b> ({device_battery_percentage}%)",
     "on-click": "kitty -e bluetuith"
   }
 }

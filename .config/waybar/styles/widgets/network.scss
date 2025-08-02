@@ -2,5 +2,9 @@
 @use '../mixins/index.scss' as *;
 
 #gnetwork {
-  @include widget();
+  @include drawer(true);
+
+  #network:not(.speed) {
+    font-size: $icon-size;
+  }
 }

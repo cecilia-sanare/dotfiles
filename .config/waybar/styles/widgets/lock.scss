@@ -3,4 +3,8 @@
 
 #glock {
   @include widget();
+
+  #custom-lock {
+    font-size: $icon-size;
+  }
 }
