@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../constants.scss' as *;
 @use '../mixins/index.scss' as *;
 
@@ -6,16 +7,16 @@
 
   #bluetooth {
     &:not(.name) {
-      color: #888888;
+      color: $accent;
       font-size: $icon-size;
 
-      &.on {
-        color: #2196f3;
-      }
-
       &.connected {
-        color: #99d1db;
+        color: color.scale($accent, $lightness: 80%);
       }
     }
+  }
+
+  &:hover #bluetooth:not(.name) {
+    color: black;
   }
 }

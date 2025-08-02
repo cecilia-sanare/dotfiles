@@ -31,3 +31,32 @@ $module-margin-x: 0 !default;
     }
   }
 }
+
+@mixin slider($trough: rgba(0, 0, 0, 0.5), $highlight: white) {
+  slider {
+    margin: 0;
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  trough {
+    border: none;
+
+    min-width: 80px;
+    min-height: 10px;
+    border-radius: $radius;
+    background: $trough;
+  }
+
+  highlight {
+    border: none;
+
+    min-height: 10px;
+    border-radius: $radius;
+    background: $highlight;
+  }
+}
