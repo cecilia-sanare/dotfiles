@@ -3,3 +3,4 @@ dist/
 .config/fish/*
 !.config/fish/config.fish
 .config/waybar/style.css
+.config/wofi/style.css
