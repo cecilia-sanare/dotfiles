@@ -1,0 +1,8 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "fit-to-screen": false,
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "control-center-margin-top": 20,
+  "control-center-margin-right": 20
+}

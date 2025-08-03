@@ -1,0 +1,8 @@
+/* Colors */
+.floating-notifications.background .notification-row .notification-background {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.control-center {
+  background-color: rgba(0, 0, 0, 0.8);
+}
