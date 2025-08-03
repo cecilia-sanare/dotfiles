@@ -1,7 +1,8 @@
 @use '../constants.scss' as *;
 
-.floating-notifications.background .notification-row .notification-background {
-  background-color: $background;
+.notification-group {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .control-center {

@@ -4,5 +4,7 @@
   "hide-on-clear": true,
   "hide-on-action": true,
   "control-center-margin-top": 20,
-  "control-center-margin-right": 20
+  "control-center-margin-right": 20,
+  "script-fail-notify": true,
+  "ignore-gtk-theme": true
 }
