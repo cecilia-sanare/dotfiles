@@ -9,10 +9,6 @@
     &:not(.name) {
       color: $accent;
       font-size: $icon-size;
-
-      &.connected {
-        color: color.scale($accent, $lightness: 80%);
-      }
     }
   }
 
