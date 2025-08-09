@@ -11,7 +11,7 @@
   "custom/cpu-icon": {
     "format": "󰻠",
     "tooltip": false,
-    "on-click": "kitty -e btop"
+    "on-click": "ghostty -e btop"
   },
 
   "custom/cpu-temp": {
@@ -19,11 +19,11 @@
     "exec": "~/.config/waybar/bin/cputemp.sh",
     "interval": 10,
     "return-type": "json",
-    "on-click": "kitty -e btop"
+    "on-click": "ghostty -e btop"
   },
 
   "cpu": {
     "format": "<b>{usage}󱉸</b>",
-    "on-click": "kitty -e btop"
+    "on-click": "ghostty -e btop"
   }
 }

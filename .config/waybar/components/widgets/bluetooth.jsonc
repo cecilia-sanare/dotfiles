@@ -21,7 +21,7 @@
     "tooltip": true,
     "tooltip-format": "Bluetooth Settings",
     "tooltip-format-connected": "{device_enumerate}",
-    "on-click": "kitty -e bluetuith"
+    "on-click": "ghostty -e bluetuith"
   },
 
   "bluetooth#name": {
@@ -29,6 +29,6 @@
     "format-on": "",
     "format-connected": "{device_alias}",
     "format-connected-battery": "<b>{device_alias}</b> ({device_battery_percentage}%)",
-    "on-click": "kitty -e bluetuith"
+    "on-click": "ghostty -e bluetuith"
   }
 }

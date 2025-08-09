@@ -1,4 +1,3 @@
-alias ssh="kitty +kitten ssh"
 alias so="smart-open"
 
 export VINTAGE_STORY="$HOME/.local/share/vintagestory"

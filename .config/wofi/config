@@ -5,7 +5,7 @@ show=drun
 prompt=Apps
 normal_window=true
 layer=top
-term=kitty
+term=ghostty
 
 ## Geometry
 width=500px
