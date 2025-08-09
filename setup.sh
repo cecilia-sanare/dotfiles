@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-CONFIG_DIRS=($(find "$(pwd)/.config" -mindepth 1 -maxdepth 1 -type d))
+CONFIG_DIRS=($(find "$(pwd)/.config" -mindepth 1 -maxdepth 1))
 
 echo -n "Creating symbolic links to the config directories"
 

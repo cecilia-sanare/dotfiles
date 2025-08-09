@@ -1,0 +1,18 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$python\
+$character"""
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
