@@ -1,0 +1,10 @@
+@use '../constants.scss' as *;
+@use '../mixins/index.scss' as *;
+
+#gdisk {
+  @include drawer();
+
+  #custom-disk-icon {
+    font-size: $icon-size;
+  }
+}
