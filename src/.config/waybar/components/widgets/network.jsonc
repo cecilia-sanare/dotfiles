@@ -7,7 +7,6 @@
     },
     "modules": ["network", "network#speed"]
   },
-
   "network": {
     "format": "{icon}",
     "format-icons": {
@@ -20,9 +19,8 @@
     "format-disconnected": "󰖪",
     "format-linked": "󰈁",
     "tooltip": false,
-    "on-click-middle": "pgrep -x wofi &>/dev/null && notify-send wofi || networkmanager_dmenu"
+    "on-click-right": "pgrep -x wofi &>/dev/null && notify-send wofi || networkmanager_dmenu"
   },
-
   "network#speed": {
     "format": "{bandwidthDownBits}",
     "interval": 5,
@@ -31,6 +29,6 @@
     "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
     "tooltip-format-disconnected": "Not Connected to any type of Network",
     "tooltip": true,
-    "on-click-middle": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu"
+    "on-click-right": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu"
   }
 }

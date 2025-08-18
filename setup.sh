@@ -1,18 +1,52 @@
 #!/usr/bin/env sh
 
-CONFIG_DIRS=($(find "$(pwd)/.config" -mindepth 1 -maxdepth 1))
+escape_path()
+{
+  echo $1 | sed -e "s/\//\\\\\//g"
+}
 
-echo -n "Creating symbolic links to the config directories"
+OS=$(uname -s)
+CURRENT_DIR="$(pwd)/src"
+
+current_os_dir()
+{
+  DIRECTORY=""
+  if [ "$OS" = "Linux" ]; then
+    DIRECTORY="$CURRENT_DIR/linux"
+  elif [ "$OS" = "Darwin" ]; then
+    DIRECTORY="$CURRENT_DIR/macos"
+  fi
+
+  if [ ! -z "$DIRECTORY" ] && [ -d "$DIRECTORY" ]; then
+    echo "$DIRECTORY"
+  fi
+}
+
+CURRENT_OS_DIR=`current_os_dir $OS`
+
+CONFIG_DIRS=($(find "$CURRENT_DIR" -mindepth 1 -maxdepth 1 | grep -v "linux" | grep -v "macos" | grep -v "\.config"))
+CONFIG_DIRS+=($(find "$CURRENT_DIR/.config" -mindepth 1 -maxdepth 1))
+
+if [ ! -z "$CURRENT_OS_DIR" ]; then
+  CONFIG_DIRS+=($(find $CURRENT_OS_DIR -mindepth 1 -maxdepth 1 | grep -v "\.config"))
+
+  if [ -d "$CURRENT_OS_DIR/.config" ]; then
+    CONFIG_DIRS+=($(find "$CURRENT_OS_DIR/.config" -mindepth 1 -maxdepth 1))
+  fi
+fi
+
+printf "Creating symbolic links to the config directories"
 
 for CONFIG_DIR in "${CONFIG_DIRS[@]}"; do
-  OUTPUT_DIR="$HOME/.config/$(basename $CONFIG_DIR)"
+  BASE_DIR=$(echo $CONFIG_DIR | sed -e "s/$(escape_path "$CURRENT_OS_DIR")//g" | sed -e "s/$(escape_path "$CURRENT_DIR")//g")
+  OUTPUT_DIR="$HOME$BASE_DIR"
 
   if [ -d "$OUTPUT_DIR" ] && [ ! -L "$OUTPUT_DIR" ]; then
     rm -rf $OUTPUT_DIR
   fi
 
   ln -sfnT "$CONFIG_DIR" "$OUTPUT_DIR"
-  echo -n "."
+  printf "."
   sleep 0.01
 done
 

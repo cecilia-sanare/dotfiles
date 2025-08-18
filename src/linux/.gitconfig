@@ -1,0 +1,35 @@
+[init]
+	defaultBranch = main
+
+[fetch]
+	prune = true
+
+[user]
+	email = ceci@sanare.dev
+	name = Cecilia Sanare
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBoMrYMlRCELYBpwkn8f5IZOfdifcIzDkgB9b2SiyuAX
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+
+[commit]
+	gpgsign = true
+
+[core]
+	editor = vim
+
+[alias]
+  cp = cherry-pick
+  st = status -s
+  cl = clone
+  ci = commit
+  co = checkout
+  br = branch
+  diff = diff --word-diff
+  dc = diff --cached
+  ca = commit --amend --no-edit
+[push]
+	autoSetupRemote = true
