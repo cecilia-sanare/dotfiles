@@ -45,7 +45,15 @@ for CONFIG_DIR in "${CONFIG_DIRS[@]}"; do
     rm -rf $OUTPUT_DIR
   fi
 
-  ln -sfnT "$CONFIG_DIR" "$OUTPUT_DIR"
+  if [ "$OS" = "Darwin" ]; then
+    ln -sfn "$CONFIG_DIR" "$OUTPUT_DIR"
+  elif [ "$OS" = "Linux" ]; then
+    ln -sfnT "$CONFIG_DIR" "$OUTPUT_DIR"
+  else
+    echo ". Error! Unsupported operating system!"
+    exit 1
+  fi
+
   printf "."
   sleep 0.01
 done
