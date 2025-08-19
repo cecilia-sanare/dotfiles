@@ -11,6 +11,7 @@ CURRENT_DIR="$(pwd)/src"
 current_os_dir()
 {
   DIRECTORY=""
+
   if [ "$OS" = "Linux" ]; then
     DIRECTORY="$CURRENT_DIR/linux"
   elif [ "$OS" = "Darwin" ]; then
@@ -20,6 +21,17 @@ current_os_dir()
   if [ ! -z "$DIRECTORY" ] && [ -d "$DIRECTORY" ]; then
     echo "$DIRECTORY"
   fi
+}
+
+get_base_dir()
+{
+  BASE_DIR=$1
+
+  if [ ! -z "$CURRENT_OS_DIR" ]; then
+    BASE_DIR=$(echo $BASE_DIR | sed -e "s/$(escape_path "$CURRENT_OS_DIR")//g")
+  fi
+
+  echo $BASE_DIR | sed -e "s/$(escape_path "$CURRENT_DIR")//g"
 }
 
 CURRENT_OS_DIR=`current_os_dir $OS`
@@ -38,7 +50,7 @@ fi
 printf "Creating symbolic links to the config directories"
 
 for CONFIG_DIR in "${CONFIG_DIRS[@]}"; do
-  BASE_DIR=$(echo $CONFIG_DIR | sed -e "s/$(escape_path "$CURRENT_OS_DIR")//g" | sed -e "s/$(escape_path "$CURRENT_DIR")//g")
+  BASE_DIR=$(get_base_dir $CONFIG_DIR)
   OUTPUT_DIR="$HOME$BASE_DIR"
 
   if [ -d "$OUTPUT_DIR" ] && [ ! -L "$OUTPUT_DIR" ]; then
