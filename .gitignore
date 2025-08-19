@@ -2,5 +2,4 @@ node_modules/
 dist/
 **/.config/fish/*
 !**/.config/fish/config.fish
-**/.config/waybar/style.css
 **/src/**/*.css

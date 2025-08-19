@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: [
-        fileURLToPath(new URL('./src/.config/waybar/style.css', import.meta.url))
+        fileURLToPath(new URL('./src/.config/linux/waybar/style.css', import.meta.url))
       ],
     },
   },

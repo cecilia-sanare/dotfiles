@@ -31,5 +31,6 @@
   diff = diff --word-diff
   dc = diff --cached
   ca = commit --amend --no-edit
+
 [push]
 	autoSetupRemote = true
