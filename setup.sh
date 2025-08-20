@@ -71,3 +71,22 @@ for CONFIG_DIR in "${CONFIG_DIRS[@]}"; do
 done
 
 echo " Done!"
+
+# Setup default applications
+
+if [ "$OS" = "Linux" ]; then
+  printf "Setting up default apps..."
+  # Setup Thunar as the default file browser
+  if command -v thunar >/dev/null 2>&1; then
+    xdg-mime default thunar.desktop inode/directory
+  fi
+
+  # Setup Zen as the default browser
+  if command -v zen-browser >/dev/null 2>&1; then
+    xdg-mime default zen.desktop x-scheme-handler/http
+    xdg-mime default zen.desktop x-scheme-handler/https
+    xdg-mime default zen.desktop text/html
+  fi
+
+  echo " Done!"
+fi
