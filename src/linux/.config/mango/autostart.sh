@@ -29,4 +29,6 @@ sway-audio-idle-inhibit >/dev/null 2>&1 &
 # change light value and volume value by swayosd-client in keybind
 swayosd-server >/dev/null 2>&1 &
 
-1password --silent >/dev/null 2>&1  &
+1password --silent >/dev/null 2>&1 &
+
+goxlr-daemon >/dev/null 2>&1 &
