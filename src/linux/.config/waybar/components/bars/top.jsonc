@@ -8,7 +8,7 @@
     "~/.config/waybar/components/widgets/network.jsonc",
     "~/.config/waybar/components/widgets/notify.jsonc",
     "~/.config/waybar/components/widgets/pulseaudio.jsonc",
-    "~/.config/waybar/components/widgets/tray.jsonc"
+    "~/.config/waybar/components/widgets/tray.jsonc",
   ],
 
   "layer": "top",
@@ -17,7 +17,18 @@
   "spacing": 0,
   "reload_style_on_change": true,
 
-  "modules-left": ["group/glock", "group/gcpu", "group/gdisk"],
+  "ext/workspaces": {
+    "format": "{name}: {icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },
+    "ignore-hidden": true,
+    "sort-by-id": true,
+  },
+
+  "modules-left": ["group/glock", "group/gcpu", "group/gdisk", "ext/workspaces"],
   "modules-center": ["group/gclock", "group/gnotify"],
-  "modules-right": ["group/gtray", "group/gbluetooth", "group/gnetwork", "group/gpulseaudio"]
+  "modules-right": ["group/gtray", "group/gbluetooth", "group/gnetwork", "group/gpulseaudio"],
 }

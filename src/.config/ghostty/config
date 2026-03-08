@@ -12,3 +12,4 @@ foreground = #cdd6f4
 background = #1e1e2e
 background-opacity = 0.8
 background-blur = 20
+shell-integration-features = ssh-env

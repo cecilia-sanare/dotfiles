@@ -1,9 +1,19 @@
 ### Ceci's Dotfiles!~
 
+#### Prerequisites
+
+- CachyOS (w/ Hyprland DE)
+
+#### Setup
+
 ```sh
-sudo pacman -Syu less git ghostty thunar wofi hyprpolkitagent hyprlock swww nerd-fonts starship fastfetch swaync btop gnome-themes-extra pipewire pulseaudio
+sudo pacman -Syu zen-browser vesktop-bin bun-bin less git ghostty thunar thunar-shares-plugin thunar-archive-plugin thunar-media-tags-plugin gvfs rofi xfce-polkit nerd-fonts starship fastfetch swaybg swaync btop gnome-themes-extra
 ```
 
 ```sh
-yay -Syu zen-browser quickshell vesktop-bin bun-bin 1password dotacat networkmanager-dmenu-git bluetuith-bin adwaita-qt6 adwaita-qt5
+paru -Syu 1password dotacat networkmanager-dmenu-git bluetuith-bin adwaita-qt6 adwaita-qt5 papirus-icon-theme
+```
+
+```sh
+sudo pacman -Rns alacritty kitty dolphin micro cachyos-micro-settings
 ```

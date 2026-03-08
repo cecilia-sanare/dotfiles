@@ -19,7 +19,7 @@ $waybar-margin-x: 0 !default;
   font-weight: 500;
 
   > * {
-    @include mt($waybar-margin-top);
+    @include my($waybar-margin-top);
     @include mx($waybar-margin-x);
   }
 }
@@ -27,12 +27,20 @@ $waybar-margin-x: 0 !default;
 .modules-left,
 .modules-center,
 .modules-right {
+  @include rounded($radius);
+  border: $border-width solid $accent;
+
+  // TODO: Utilize this if we ever figure out how to get it to work
+  // *:hover {
+  //   border-color: $accent;
+  // }
+
   > :first-child > * {
-    @include rounded-left($radius);
+    @include rounded-left($radius - $border-width);
   }
 
   > :last-child > * {
-    @include rounded-right($radius);
+    @include rounded-right($radius - $border-width);
   }
 }
 

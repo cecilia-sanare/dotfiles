@@ -1,5 +1,5 @@
+@use '../../mixins/index.scss' as *;
 @use '../constants.scss' as *;
-@use './padding.scss' as *;
 
 $module-margin-x: 0 !default;
 
@@ -9,7 +9,9 @@ $module-margin-x: 0 !default;
   min-width: 0;
   border: none;
   /* Transition for background-color and color only */
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 
   &:hover {
     background-color: $active;

@@ -1,5 +1,5 @@
+@use '../../mixins/index.scss' as *;
 @use '../constants.scss' as *;
-@use './margin.scss' as *;
 @use './widget.scss' as *;
 
 @mixin drawer($rtl: false) {

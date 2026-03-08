@@ -45,3 +45,6 @@ if status is-interactive
   starship init fish | source
   fastfetch | dotacat --seed 200 -p 10
 end
+
+# Created by `pipx` on 2025-10-03 00:08:19
+set PATH $PATH /home/ceci/.local/bin

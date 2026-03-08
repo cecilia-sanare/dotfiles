@@ -1,10 +1,33 @@
+@use '../mixins/index.scss' as *;
 @use '../constants.scss' as *;
+
+:root {
+  --cc-bg: rgba(0, 0, 0, 0.8);
+  --noti-bg: 0, 0, 0;
+  --noti-bg-hover: rgba(0, 0, 0, 0.8);
+  --border: 2px solid #3d3d3d;
+  --border-radius: 10px;
+  --notification-shadow: none;
+}
+
+.control-center {
+  border: $border-width solid $inactive;
+  transition: 0.15s ease-in-out border-color;
+
+  &:hover {
+    border-color: $accent;
+  }
+}
 
 .notification-group {
   background-color: transparent;
   box-shadow: none;
 }
 
-.control-center {
-  background-color: $background;
+.notification {
+  transition: 0.15s ease-in-out border-color;
+
+  &:hover {
+    border-color: $accent;
+  }
 }

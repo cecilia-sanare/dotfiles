@@ -1,6 +1,6 @@
 [
   {
-    "output": ["DP-2"],
-    "include": ["~/.config/waybar/components/bars/top.jsonc"]
-  }
+    // "output": ["DP-2"],
+    "include": ["~/.config/waybar/components/bars/top.jsonc"],
+  },
 ]

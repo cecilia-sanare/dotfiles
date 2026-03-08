@@ -17,9 +17,9 @@
 }
 
 @mixin ml($padding) {
-  padding-left: $padding;
+  margin-left: $padding;
 }
 
 @mixin mr($padding) {
-  padding-right: $padding;
+  margin-right: $padding;
 }

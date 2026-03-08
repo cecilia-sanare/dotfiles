@@ -1,0 +1,64 @@
+@use 'constants.scss' as *;
+@use 'mixins/index.scss' as *;
+
+window#osd {
+  @include rounded($radius);
+
+  border: $border-width solid $accent;
+  background: $background;
+  color: $secondary;
+}
+
+window#osd #container {
+  @include mx(8px);
+  @include my(8px);
+}
+
+window#osd image,
+window#osd label {
+  color: inherit;
+}
+
+window#osd progress {
+  background: $accent;
+}
+
+window#osd trough {
+  background: $inactive;
+}
+
+// window#osd progressbar:disabled,
+// window#osd image:disabled {
+//   opacity: 0.5;
+// }
+// window#osd progressbar,
+// window#osd segmentedprogress {
+//   min-height: 6px;
+//   border-radius: 999px;
+//   background: transparent;
+//   border: none;
+// }
+// window#osd trough,
+// window#osd segment {
+//   min-height: inherit;
+//   border-radius: inherit;
+//   border: none;
+//   background: $inactive;
+// }
+
+// window#osd progress,
+// window#osd segment.active {
+//   min-height: inherit;
+//   border-radius: inherit;
+//   border: none;
+//   color: inherit;
+//   background: currentColor;
+// }
+
+// window#osd segment {
+//   margin-left: 8px;
+// }
+
+// window#osd segment:first-child {
+//   margin-left: 0;
+// }

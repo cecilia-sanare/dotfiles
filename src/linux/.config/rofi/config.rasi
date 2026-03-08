@@ -1,0 +1,14 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+
+@theme "/home/ceci/.config/rofi/themes/spotlight-dark.rasi"

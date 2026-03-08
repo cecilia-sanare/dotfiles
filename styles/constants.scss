@@ -3,7 +3,13 @@
 /* Colors */
 
 $background: rgba(0, 0, 0, 0.8);
-$accent: #f19cbb;
+// $accent: #f19cbb;
+$accent: #5fedd6;
 $secondary: white;
+$inactive: #3d3d3d;
 $active: color.change($accent, $alpha: 0.8);
 $active-accent: $background;
+
+/* Misc */
+$radius: 10px;
+$border-width: 2px;
