@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'constants.scss' as *;
 @use 'mixins/index.scss' as *;
 @forward 'widgets/index.scss';
@@ -29,6 +30,9 @@ $waybar-margin-x: 0 !default;
 .modules-right {
   @include rounded($radius);
   border: $border-width solid $accent;
+  box-shadow:
+    0 0 10px $accent,
+    0 0 20px color.adjust($accent, $lightness: -50%);
 
   // TODO: Utilize this if we ever figure out how to get it to work
   // *:hover {
