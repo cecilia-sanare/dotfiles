@@ -9,7 +9,6 @@
 {
   "git_panel": {
     "sort_by_path": true,
-    "tree_view": true
   },
   "base_keymap": "VSCode",
   "language_models": {
@@ -38,8 +37,13 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "dark",
-    "light": "Catppuccin Iced Latte (Blur)",
+    "light": "Dayfox - blurred",
     "dark": "Carbonfox - blurred",
+  },
+  "theme_overrides": {
+    "Carbonfox - blurred": {
+      "border": "#ffffff30",
+    },
   },
   "toolbar": {
     "agent_review": false,
