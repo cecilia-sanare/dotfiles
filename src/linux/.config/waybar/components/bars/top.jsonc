@@ -11,9 +11,9 @@
     "~/.config/waybar/components/widgets/tray.jsonc",
   ],
 
-  "layer": "top",
+  "layer": "bottom",
   "position": "top",
-  "margin-bottom": -10,
+  "margin-bottom": -25,
   "spacing": 0,
   "reload_style_on_change": true,
 

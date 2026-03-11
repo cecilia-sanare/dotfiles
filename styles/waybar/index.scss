@@ -3,7 +3,7 @@
 @use 'mixins/index.scss' as *;
 @forward 'widgets/index.scss';
 
-$waybar-margin-top: 0 !default;
+$waybar-margin-y: 0 !default;
 $waybar-margin-x: 0 !default;
 
 * {
@@ -20,8 +20,10 @@ $waybar-margin-x: 0 !default;
   font-weight: 500;
 
   > * {
-    @include my($waybar-margin-top);
+    @include mt($waybar-margin-y);
     @include mx($waybar-margin-x);
+    @include mb($waybar-margin-y + 5px);
+    @include pb(10px);
   }
 }
 

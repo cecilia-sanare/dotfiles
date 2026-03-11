@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-pkill waybar; hyprctl dispatch exec waybar
+pkill waybar; waybar >/dev/null 2>&1 &

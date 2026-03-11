@@ -39,6 +39,7 @@ end
 
 if type -q cursor; alias code="cursor"; end
 if type -q smart-open; alias so="smart-open"; end
+if type -q codium; alias code="codium"; end
 
 if status is-interactive
   # Commands to run in interactive sessions can go here

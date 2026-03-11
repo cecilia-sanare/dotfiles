@@ -1,0 +1,51 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "git_panel": {
+    "sort_by_path": true,
+    "tree_view": true
+  },
+  "base_keymap": "VSCode",
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+    },
+  },
+  "agent": {
+    "button": false,
+    "enabled": false,
+  },
+  "edit_predictions": {
+    "mode": "eager",
+    "provider": "ollama",
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "model": "starcoder2:7b",
+    },
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Soft Charmed Icons",
+  },
+  "ui_font_size": 18.0,
+  "buffer_font_size": 15.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Iced Latte (Blur)",
+    "dark": "Carbonfox - blurred",
+  },
+  "toolbar": {
+    "agent_review": false,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}

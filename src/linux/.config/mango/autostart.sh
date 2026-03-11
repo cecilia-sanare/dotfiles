@@ -9,7 +9,7 @@ gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"   # for GTK
 swaync >/dev/null 2>&1 &
 
 # wallpaper
-swaybg -i "$(find ~/Pictures/wallpapers/ -type f | shuf -n 1 | xargs)" >/dev/null 2>&1 &
+waypaper --restore
 
 # top bar
 waybar >/dev/null 2>&1 &
@@ -31,4 +31,7 @@ swayosd-server >/dev/null 2>&1 &
 
 1password --silent >/dev/null 2>&1 &
 
-goxlr-daemon >/dev/null 2>&1 &
+# start goxlr-daemon only if not already running
+if ! pgrep -x "goxlr-daemon" >/dev/null 2>&1; then
+    goxlr-daemon >/dev/null 2>&1 &
+fi
