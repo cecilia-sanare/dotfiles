@@ -16,6 +16,9 @@
       "api_url": "http://localhost:11434",
     },
   },
+  "title_bar": {
+    "show_sign_in": false,
+  },
   "collaboration_panel": {
     "button": false,
   },
