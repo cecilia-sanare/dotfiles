@@ -23,15 +23,19 @@
     "button": false,
   },
   "agent": {
-    "button": false,
-    "enabled": false,
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b",
+      "enable_thinking": false,
+    },
   },
   "edit_predictions": {
-    "mode": "eager",
+    "mode": "subtle",
     "provider": "ollama",
     "ollama": {
       "api_url": "http://localhost:11434",
-      "model": "starcoder2:7b",
+      "model": "deepseek-coder:6.7b-base",
     },
   },
   "icon_theme": {
@@ -49,6 +53,14 @@
   "theme_overrides": {
     "Carbonfox - blurred": {
       "border": "#ffffff30",
+      "editor.active_line.background": "#ffffff10",
+      // Give the current tab a focus color to make it clear which is focused
+      "tab.active_background": "#ffffff20",
+      // Make it a bit darker to improve readability
+      "background": "#000000D9",
+      "surface.background": "#000000BF",
+      "status_bar.background": "#000000D9",
+      "title_bar.background": "#000000D9",
     },
   },
   "toolbar": {
