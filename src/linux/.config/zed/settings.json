@@ -23,7 +23,7 @@
     "button": false,
   },
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "ollama",
       "model": "qwen2.5-coder:7b",
