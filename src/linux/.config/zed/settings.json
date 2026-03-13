@@ -61,6 +61,7 @@
       "surface.background": "#000000BF",
       "status_bar.background": "#000000D9",
       "title_bar.background": "#000000D9",
+      "title_bar.inactive_background": "#000000D9",
     },
   },
   "toolbar": {
