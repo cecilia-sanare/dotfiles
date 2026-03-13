@@ -57,11 +57,18 @@
       // Give the current tab a focus color to make it clear which is focused
       "tab.active_background": "#ffffff20",
       // Make it a bit darker to improve readability
-      "background": "#000000D9",
+      "background": "#00000080",
       "surface.background": "#000000BF",
-      "status_bar.background": "#000000D9",
-      "title_bar.background": "#000000D9",
-      "title_bar.inactive_background": "#000000D9",
+      "status_bar.background": "#00000080",
+      "title_bar.background": "#00000080",
+      "title_bar.inactive_background": "#00000080",
+    },
+  },
+  "linux": {
+    "theme_overrides": {
+      "Carbonfox - blurred": {
+        "background.appearance": "transparent",
+      },
     },
   },
   "toolbar": {
