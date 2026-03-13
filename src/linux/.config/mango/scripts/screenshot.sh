@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-grim -g "$(slurp)" - | wl-copy
+wayfreeze --after-freeze-cmd 'grim -g "$(slurp)" - | wl-copy; killall wayfreeze'
