@@ -10,7 +10,7 @@ if pgrep -x wf-recorder > /dev/null; then
     notify-send "Screen Recorder" "Stopped! Transcoding..."
 
     TRANSCODED="${LAST%.mp4}-transcoded.mp4"
-    ffmpeg -i "$LAST" -c:v libx265 -crf 28 -preset slow -c:a copy "$TRANSCODED" && \
+    ffmpeg -i "$LAST" "$TRANSCODED" && \
       rm "$LAST" && \
       mv "$TRANSCODED" "$LAST"
 
